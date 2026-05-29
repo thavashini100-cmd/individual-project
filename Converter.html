@@ -1,0 +1,145 @@
+ 
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Unit Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Unit Converter</h1>
+
+<input type="number"
+id="value"
+placeholder="Enter Value">
+
+<br><br>
+
+<button onclick="cmToM()">
+CM to M
+</button>
+
+<button onclick="mToCm()">
+M to CM
+</button>
+
+<button onclick="mToKm()">
+M to KM
+</button>
+
+<button onclick="kmToM()">
+KM to M
+</button>
+
+<p id="result"></p>
+
+<br>
+
+<a href="Tools.html">
+
+<button>
+Back
+</button>
+
+</a>
+
+<script>
+
+ 
+
+function cmToM()
+{
+    let value =
+    parseFloat(document.getElementById("value").value);
+
+    if(isNaN(value))
+    {
+        document.getElementById("result").innerHTML =
+        "Please enter a value";
+    }
+
+    else
+    {
+        let answer = value / 100;
+
+        document.getElementById("result").innerHTML =
+        value + " cm = " + answer + " metre";
+    }
+}
+
+ 
+
+function mToCm()
+{
+    let value =
+    parseFloat(document.getElementById("value").value);
+
+    if(isNaN(value))
+    {
+        document.getElementById("result").innerHTML =
+        "Please enter a value";
+    }
+
+    else
+    {
+        let answer = value * 100;
+
+        document.getElementById("result").innerHTML =
+        value + " metre = " + answer + " cm";
+    }
+}
+
+ 
+
+function mToKm()
+{
+    let value =
+    parseFloat(document.getElementById("value").value);
+
+    if(isNaN(value))
+    {
+        document.getElementById("result").innerHTML =
+        "Please enter a value";
+    }
+
+    else
+    {
+        let answer = value / 1000;
+
+        document.getElementById("result").innerHTML =
+        value + " metre = " + answer + " km";
+    }
+}
+
+ 
+
+function kmToM()
+{
+    let value =
+    parseFloat(document.getElementById("value").value);
+
+    if(isNaN(value))
+    {
+        document.getElementById("result").innerHTML =
+        "Please enter a value";
+    }
+
+    else
+    {
+        let answer = value * 1000;
+
+        document.getElementById("result").innerHTML =
+        value + " km = " + answer + " metre";
+    }
+}
+
+</script>
+
+</body>
+</html>
+ 

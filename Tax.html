@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Income Tax Calculator</h1>
+
+<input type="number" id="salary"
+placeholder="Enter Salary">
+
+<br><br>
+
+<button onclick="calculateTax()">
+Calculate Tax
+</button>
+
+<p id="result"></p>
+
+<br>
+
+<a href="Tools.html">
+<button>Back</button>
+</a>
+
+<script>
+
+function calculateTax()
+{
+    let salary =
+    parseFloat(document.getElementById("salary").value);
+
+    let tax = salary * 0.06;
+
+    let total = salary + tax;
+
+    document.getElementById("result").innerHTML =
+    "Tax = RM " + tax.toFixed(2) +
+    "<br>Total = RM " + total.toFixed(2);
+}
+
+</script>
+
+</body>
+</html>
